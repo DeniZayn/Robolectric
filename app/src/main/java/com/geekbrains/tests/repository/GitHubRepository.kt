@@ -1,6 +1,7 @@
 package com.geekbrains.tests.repository
 
 import com.geekbrains.tests.model.SearchResponse
+import com.geekbrains.tests.presenter.search.SearchPresenter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -9,7 +10,7 @@ internal class GitHubRepository(private val gitHubApi: GitHubApi) {
 
     fun searchGithub(
         query: String,
-        callback: GitHubRepositoryCallback
+        callback: SearchPresenter
     ) {
         val call = gitHubApi.searchGithub(query)
         call?.enqueue(object : Callback<SearchResponse?> {
@@ -28,10 +29,5 @@ internal class GitHubRepository(private val gitHubApi: GitHubApi) {
                 callback.handleGitHubError()
             }
         })
-    }
-
-    interface GitHubRepositoryCallback {
-        fun handleGitHubResponse(response: Response<SearchResponse?>?)
-        fun handleGitHubError()
     }
 }
