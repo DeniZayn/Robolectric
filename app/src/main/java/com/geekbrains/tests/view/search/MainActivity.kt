@@ -13,10 +13,12 @@ import com.geekbrains.tests.presenter.search.SearchPresenter
 import com.geekbrains.tests.repository.GitHubApi
 import com.geekbrains.tests.repository.GitHubRepository
 import com.geekbrains.tests.view.details.DetailsActivity
+import com.geekbrains.tests.repository.RepositoryContract
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import android.content.Context
+import kotlinx.android.synthetic.main.activity_details.*
+import java.util.*
 
 class MainActivity : AppCompatActivity(), ViewSearchContract {
 
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity(), ViewSearchContract {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUI()
+        presenter.onAttach()
     }
 
     private fun setUI() {
@@ -78,6 +81,12 @@ class MainActivity : AppCompatActivity(), ViewSearchContract {
         searchResults: List<SearchResult>,
         totalCount: Int
     ) {
+        with(totalCountTextView) {
+            visibility = View.VISIBLE
+            text =
+                String.format(Locale.getDefault(), getString(R.string.results_count), totalCount)
+        }
+
         this.totalCount = totalCount
         adapter.updateResults(searchResults)
     }
@@ -100,5 +109,6 @@ class MainActivity : AppCompatActivity(), ViewSearchContract {
 
     companion object {
         const val BASE_URL = "https://api.github.com"
+        const val FAKE = "FAKE"
     }
 }
