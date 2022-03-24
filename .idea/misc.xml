@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/denis/AndroidStudioProjects/Robolectric/app/src/main/res/layout/activity_details.xml" value="0.2163265306122449" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/Robolectric/app/src/main/res/layout/activity_main.xml" value="0.12107396149949341" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/Robolectric/app/src/main/res/layout/fragment_details.xml" value="0.176" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/Robolectric/app/src/main/res/layout/list_item.xml" value="0.1" />
       </map>
     </option>
   </component>
