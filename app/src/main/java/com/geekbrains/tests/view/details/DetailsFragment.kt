@@ -10,6 +10,7 @@ import com.geekbrains.tests.R
 import com.geekbrains.tests.presenter.details.DetailsPresenter
 import com.geekbrains.tests.presenter.details.PresenterDetailsContract
 import kotlinx.android.synthetic.main.activity_details.*
+import kotlinx.android.synthetic.main.fragment_details.*
 import java.util.*
 
 class DetailsFragment : Fragment(), ViewDetailsContract {
