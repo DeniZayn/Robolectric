@@ -1,4 +1,4 @@
-package com.geekbrains.tests.HW5
+package com.geekbrains.tests.HW7
 
 import android.view.View
 import androidx.test.core.app.ActivityScenario
@@ -35,8 +35,8 @@ class MainActivityRecyclerViewTest {
             onView(withId(R.id.recyclerView))
                 .perform(
                     RecyclerViewActions
-                    .scrollTo<SearchResultAdapter.SearchResultViewHolder>(
-                        hasDescendant(withText("FullName: 42"))))
+                        .scrollTo<SearchResultAdapter.SearchResultViewHolder>(
+                            hasDescendant(withText("FullName: 42"))))
         }
     }
 

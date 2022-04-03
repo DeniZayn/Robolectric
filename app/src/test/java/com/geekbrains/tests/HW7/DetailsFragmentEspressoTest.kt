@@ -1,4 +1,4 @@
-package com.geekbrains.tests.HW5
+package com.geekbrains.tests.HW7
 
 import androidx.core.os.bundleOf
 import androidx.fragment.app.testing.FragmentScenario
@@ -11,6 +11,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.geekbrains.tests.R
+import com.geekbrains.tests.TEST_NUMBER_OF_RESULTS_PLUS_1
 import com.geekbrains.tests.view.details.DetailsFragment
 import org.junit.Before
 import org.junit.Test
